@@ -1,10 +1,8 @@
 # GDSC Helper APIs
 
-<div align="center">
 [![GoDoc](https://godoc.org/github.com/GDSC-ASU/helper-apis?status.png)](https://godoc.org/github.com/GDSC-ASU/helper-apis)
 [![Go Report Card](https://goreportcard.com/badge/github.com/GDSC-ASU/helper-apis)](https://goreportcard.com/report/github.com/GDSC-ASU/helper-apis)
 [![rex-deployment](https://github.com/GDSC-ASU/helper-apis/actions/workflows/rex-deployment.yml/badge.svg)](https://github.com/GDSC-ASU/helper-apis/actions/workflows/rex-deployment.yml)
-</div>
 
 Some APIs used for testing purposes.
 
