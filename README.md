@@ -22,7 +22,7 @@ Sample response:
 
 ```json
 {
-	text:   "Great ideas often receive violent opposition from mediocre minds.",
-	author: "Albert Einstein",
-},
+	"text":   "Great ideas often receive violent opposition from mediocre minds.",
+	"author": "Albert Einstein"
+}
 ```
