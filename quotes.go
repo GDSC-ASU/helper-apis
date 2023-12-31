@@ -11,6 +11,7 @@ func handleGetQuote(w http.ResponseWriter, r *http.Request) {
 	rand := rand.New(rand.NewSource(time.Now().UnixMilli()))
 	quote := quotes[rand.Intn(len(quotes))]
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	_ = json.NewEncoder(w).Encode(quote)
 }
 
