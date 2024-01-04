@@ -22,7 +22,24 @@ Sample response:
 
 ```json
 {
-	"text":   "Great ideas often receive violent opposition from mediocre minds.",
-	"author": "Albert Einstein"
+  "text": "Great ideas often receive violent opposition from mediocre minds.",
+  "author": "Albert Einstein"
+}
+```
+
+**GET https://apis.gdscasu.com/image**
+
+An endpoint that returns quote and who said it, from a pre defined list.
+
+Query parameters:
+
+- `count` (optional): specifies the number of returned images' paths.
+- `orientation` (default is landscape): specifies the orientation of the returned image(s).
+
+Sample response:
+
+```json
+{
+  "image": ["/files/images/landscape1.jpg"]
 }
 ```

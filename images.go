@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"math"
 	"math/rand"
 	"net/http"
 	"os"
@@ -54,12 +55,10 @@ func handleGetImage(w http.ResponseWriter, r *http.Request) {
 	if parsedCount, err := strconv.Atoi(r.URL.Query().Get("count")); err == nil {
 		count = parsedCount
 	}
-
 	images := []string{getRandomImage(orientation)}
-	for i := 1; i < count; i++ {
+	for i := 1; i < int(math.Min(float64(count), float64(len(imagesPaths)))); i++ {
 		images = append(images, getRandomImage(orientation))
 	}
-
 	_ = json.NewEncoder(w).Encode(map[string]any{
 		"images": images,
 	})
