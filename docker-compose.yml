@@ -7,7 +7,17 @@ services:
       context: .
     image: "helper-apis"
     restart: "always"
+    volumes:
+      - files:/app/files
     ports:
       - "10000:8080"
     env_file: ./.env.docker
     stdin_open: true
+
+volumes:
+  files:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./files
