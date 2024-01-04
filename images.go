@@ -59,6 +59,8 @@ func handleGetImage(w http.ResponseWriter, r *http.Request) {
 	for i := 1; i < int(math.Min(float64(count), float64(len(imagesPaths)))); i++ {
 		images = append(images, getRandomImage(orientation))
 	}
+	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	_ = json.NewEncoder(w).Encode(map[string]any{
 		"images": images,
 	})
